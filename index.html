@@ -1,225 +1,243 @@
-index.html
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Chronica Antiqua | Ancient Civilizations & Archaeological Discoveries</title>
+<title>Chronica Antiqua | Ancient Civilizations & Archaeology</title>
 
-  <meta name="description" content="Chronica Antiqua explores ancient civilizations, archaeology, and the latest discoveries from Mesopotamia, Egypt, and early human history. Academic, accessible, and evidence-based." />
+<meta name="description" content="Chronica Antiqua explores ancient civilizations, archaeology, and the deepest roots of human history — from Göbekli Tepe to Egypt and Mesopotamia.">
 
-  <meta name="keywords" content="ancient history, ancient civilizations, archaeology discoveries, Mesopotamia, Ancient Egypt, Neolithic, Göbekli Tepe, early human history" />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Libre+Baskerville&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --gold: #d4af37;
-      --dark: #020617;
-      --light: #e5e7eb;
-    }
+<style>
 
-    * { box-sizing: border-box; }
+:root{
+--gold:#d4af37;
+--dark:#0b0f19;
+--light:#e6e6e6;
+}
 
-    body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background: var(--dark);
-      color: var(--light);
-      line-height: 1.6;
-    }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-    header {
-      min-height: 90vh;
-      background:
-        linear-gradient(rgba(2,6,23,.75), rgba(2,6,23,.9)),
-        url("https://images.unsplash.com/photo-1589395937772-f67057e23349?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
+body{
+font-family:'Libre Baskerville', serif;
+background:var(--dark);
+color:var(--light);
+line-height:1.7;
+}
 
-    header h1 {
-      font-size: 3.5rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
+header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
+url("https://images.unsplash.com/photo-1549893074-7a7d7e8b4f74?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:2rem;
+}
 
-    header p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 1.2rem;
-    }
+header h1{
+font-family:'Cinzel', serif;
+font-size:4rem;
+letter-spacing:4px;
+color:var(--gold);
+}
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: var(--dark);
-      border-bottom: 3px solid var(--gold);
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-    }
+header p{
+max-width:800px;
+margin:1.5rem auto;
+font-size:1.2rem;
+}
 
-    nav a {
-      color: var(--light);
-      text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
+nav{
+position:sticky;
+top:0;
+background:#000;
+border-bottom:3px solid var(--gold);
+padding:1rem;
+display:flex;
+justify-content:center;
+gap:2rem;
+z-index:10;
+}
 
-    nav a:hover {
-      color: var(--gold);
-    }
+nav a{
+color:var(--light);
+text-decoration:none;
+font-weight:bold;
+letter-spacing:1px;
+}
 
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 5rem 1.5rem;
-    }
+nav a:hover{
+color:var(--gold);
+}
 
-    h2 {
-      color: var(--gold);
-      letter-spacing: 2px;
-      margin-bottom: 1rem;
-    }
+section{
+max-width:1200px;
+margin:auto;
+padding:5rem 1.5rem;
+}
 
-    .timeline {
-      background:
-        linear-gradient(rgba(2,6,23,.85), rgba(2,6,23,.95)),
-        url("https://images.unsplash.com/photo-1590608897129-79da98d15969?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-      border-radius: 24px;
-    }
+h2{
+color:var(--gold);
+margin-bottom:1rem;
+font-family:'Cinzel', serif;
+letter-spacing:2px;
+}
 
-    .featured {
-      background:
-        linear-gradient(rgba(2,6,23,.85), rgba(2,6,23,.95)),
-        url("https://images.unsplash.com/photo-1505739771891-5b4d47a3f7b4?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-      border-radius: 24px;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:2rem;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 3rem;
-    }
+.card{
+background:#111827;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 20px 60px rgba(0,0,0,.6);
+transition:.3s;
+}
 
-    .card {
-      background:
-        linear-gradient(rgba(2,6,23,.9), rgba(2,6,23,.98)),
-        url("https://images.unsplash.com/photo-1588611911587-31e6e44d3f44?auto=format&fit=crop&w=1200&q=80");
-      background-size: cover;
-      background-position: center;
-      border-radius: 26px;
-      padding: 2.5rem;
-      box-shadow: 0 30px 80px rgba(0,0,0,.6);
-    }
+.card:hover{
+transform:translateY(-10px);
+}
 
-    .card:nth-child(2) {
-      background:
-        linear-gradient(rgba(2,6,23,.9), rgba(2,6,23,.98)),
-        url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=1200&q=80");
-      background-size: cover;
-      background-position: center;
-    }
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
 
-    .meta {
-      opacity: 0.85;
-      font-size: 0.95rem;
-    }
+.card-content{
+padding:1.5rem;
+}
 
-    .btn {
-      margin-top: 1.5rem;
-      background: linear-gradient(135deg, var(--gold), #f59e0b);
-      border: none;
-      border-radius: 999px;
-      padding: 0.7rem 1.4rem;
-      font-weight: bold;
-      cursor: pointer;
-      color: #2b2100;
-    }
+.meta{
+opacity:.7;
+font-size:.9rem;
+margin-bottom:.5rem;
+}
 
-    footer {
-      background: var(--dark);
-      border-top: 3px solid var(--gold);
-      text-align: center;
-      padding: 3rem 1rem;
-      color: #cbd5f5;
-    }
-  </style>
+.btn{
+display:inline-block;
+margin-top:1rem;
+padding:.6rem 1.2rem;
+border-radius:50px;
+background:var(--gold);
+color:#000;
+font-weight:bold;
+text-decoration:none;
+}
+
+.comment-box{
+margin-top:3rem;
+background:#111;
+padding:2rem;
+border-radius:15px;
+}
+
+textarea{
+width:100%;
+padding:1rem;
+border-radius:10px;
+border:none;
+margin-top:1rem;
+font-family:inherit;
+}
+
+footer{
+background:#000;
+border-top:3px solid var(--gold);
+text-align:center;
+padding:3rem 1rem;
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-  <div>
-    <h1>Chronica Antiqua</h1>
-    <p>
-      An academic yet accessible exploration of <strong>ancient civilizations</strong>,
-      archaeology, and humanity’s deepest past — from the Neolithic world to classical antiquity.
-    </p>
-  </div>
+<div>
+<h1>Chronica Antiqua</h1>
+<p>
+An academic yet accessible exploration of humanity’s earliest civilizations —
+from the Neolithic revolution to the first empires of Mesopotamia and Egypt.
+</p>
+</div>
 </header>
 
 <nav>
-  <a href="#timeline">Timeline</a>
-  <a href="#featured">Discovery</a>
-  <a href="#articles">Civilizations</a>
+<a href="#civilizations">Civilizations</a>
+<a href="#discoveries">Discoveries</a>
+<a href="#discussion">Discussion</a>
 </nav>
 
-<section id="timeline" class="timeline">
-  <h2>Ancient History Timeline</h2>
-  <p>
-    Tracing early human societies from the Neolithic revolution, through the rise of cities in
-    Mesopotamia and Egypt, the invention of writing, and the emergence of early empires.
-  </p>
+<section id="civilizations">
+<h2>Ancient Civilizations</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589395937772-f67057e23349?auto=format&fit=crop&w=1200&q=80">
+<div class="card-content">
+<h3>Mesopotamia</h3>
+<p class="meta">c. 3500 BCE</p>
+<p>Urban origins, cuneiform tablets, and the birth of recorded history.</p>
+<a href="#" class="btn">Read More</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1549893074-7a7d7e8b4f74?auto=format&fit=crop&w=1200&q=80">
+<div class="card-content">
+<h3>Ancient Egypt</h3>
+<p class="meta">c. 3000 BCE</p>
+<p>Pyramids, kingship, religion, and 3,000 years of Nile civilization.</p>
+<a href="#" class="btn">Read More</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1590608897129-79da98d15969?auto=format&fit=crop&w=1200&q=80">
+<div class="card-content">
+<h3>Göbekli Tepe</h3>
+<p class="meta">c. 9600 BCE</p>
+<p>Monumental ritual architecture predating agriculture.</p>
+<a href="#" class="btn">Download PDF</a>
+</div>
+</div>
+
+</div>
 </section>
 
-<section id="featured" class="featured">
-  <h2>Discovery of the Month</h2>
-  <p>
-    <strong>Göbekli Tepe</strong> — Monumental ritual architecture dating to the 10th millennium BCE,
-    challenging long-held assumptions about the origins of civilization.
-  </p>
-  <button class="btn">Download Research (PDF)</button>
+<section id="discoveries">
+<h2>Latest Archaeological Discoveries</h2>
+<p>
+Recent excavations continue to reshape our understanding of early societies,
+trade networks, belief systems, and technological innovation.
+</p>
 </section>
 
-<section id="articles">
-  <h2>Ancient Civilizations & Archaeological Research</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Mesopotamia</h3>
-      <p class="meta">c. 3500 BCE</p>
-      <p>
-        Administrative tablets, early urbanism, and the foundations of recorded history.
-      </p>
-      <button class="btn">View Articles</button>
-    </div>
-
-    <div class="card">
-      <h3>Ancient Egypt</h3>
-      <p class="meta">c. 3000 BCE</p>
-      <p>
-        Monumental architecture, kingship, religion, and the long continuity of Nile civilization.
-      </p>
-      <button class="btn">View Articles</button>
-    </div>
-  </div>
+<section id="discussion">
+<h2>Scholarly Discussion</h2>
+<div class="comment-box">
+<p>Leave your academic thoughts or findings:</p>
+<textarea rows="5" placeholder="Write your comment here..."></textarea>
+<br>
+<a href="#" class="btn">Submit</a>
+</div>
 </section>
 
 <footer>
-  <p>© 2026 Chronica Antiqua</p>
-  <small>Ancient history • archaeology • evidence-based research • open scholarly discussion</small>
+<p>© 2026 Chronica Antiqua</p>
+<p>Ancient history • archaeology • evidence-based research</p>
 </footer>
 
 </body>
