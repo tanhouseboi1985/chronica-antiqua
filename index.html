@@ -1,81 +1,78 @@
 
 <!DOCTYPE html>
+}
+.card{
+background:
+linear-gradient(rgba(2,6,23,.9),rgba(2,6,23,.98)),
+url('https://images.unsplash.com/photo-1588611911587-31e6e44d3f44?auto=format&fit=crop&w=1200&q=80');
+background-size:cover;background-position:center;
+border-radius:26px;
+padding:2.5rem;
+box-shadow:0 30px 80px rgba(0,0,0,.6);
+}
+.card:nth-child(2){
+background:
+linear-gradient(rgba(2,6,23,.9),rgba(2,6,23,.98)),
+url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=1200&q=80');
+background-size:cover;background-position:center;
+}
+.meta{opacity:.85;font-size:.95rem}
+.btn{
+margin-top:1.5rem;
+background:linear-gradient(135deg,var(--gold),#f59e0b);
+border:none;border-radius:999px;
+padding:.7rem 1.4rem;
+font-weight:bold;cursor:pointer;color:#2b2100
+}
+footer{
+background:#020617;
+border-top:3px solid var(--gold);
+text-align:center;
+padding:3rem 1rem;color:#cbd5f5
+}
+</style>
+</head>
+<body>
+<header>
+<div>
+<h1>Chronica Antiqua</h1>
+<p>Exploring humanity’s deepest past — from the first monuments to the rise of classical civilizations.</p>
+</div>
 </header>
 <nav>
 <a href="#timeline">Timeline</a>
 <a href="#featured">Featured</a>
 <a href="#articles">Articles</a>
-<a href="#submit">Submit</a>
 </nav>
-<main class="container">
 <section id="timeline" class="timeline">
 <h2>Deep History Timeline</h2>
-<p>A broad overview of humanity’s earliest complex societies.</p>
-<div class="timeline-bar">
-<span>10,000 BCE<br>Neolithic</span>
-<span>4000 BCE<br>Early Cities</span>
-<span>3000 BCE<br>Writing</span>
-<span>1500 BCE<br>Empires</span>
-<span>500 BCE<br>Classical Age</span>
-</div>
+<p>Tracing civilization from the Neolithic revolution through the emergence of writing, cities, and empires.</p>
 </section>
-
-
 <section id="featured" class="featured">
 <h2>Discovery of the Month</h2>
-<p><strong>Göbekli Tepe Reassessment</strong> — New stratigraphic evidence suggests a longer, more complex ritual use of the site than previously assumed, reshaping models of pre‑agricultural societies.</p>
-<button class="btn">Download Featured Paper (PDF)</button>
+<p><strong>Göbekli Tepe</strong> — Monumental architecture predating agriculture, reshaping theories of social complexity.</p>
+<button class="btn">Download Paper</button>
 </section>
-
-
-<section id="articles" class="grid">
-<article class="article mesopotamia">
-<h3>Proto‑Cuneiform and the Birth of Administration</h3>
-<p class="meta">c. 3300 BCE • Mesopotamia</p>
-<p>New tablets reveal accounting systems predating formal writing, suggesting economic complexity drove literacy.</p>
-<div class="actions">
-<button class="btn">Download PDF</button>
-<button class="btn secondary">View Sources</button>
+<section id="articles">
+<h2>Featured Civilizations</h2>
+<div class="grid">
+<div class="card">
+<h3>Mesopotamia</h3>
+<p class="meta">c. 3500 BCE</p>
+<p>Administrative tablets, early cities, and the foundations of written history.</p>
+<button class="btn">View Research</button>
 </div>
-<div class="comments">
-<strong>Scholarly Discussion</strong>
-<textarea rows="3" placeholder="Your interpretation or critique..."></textarea>
+<div class="card">
+<h3>Ancient Egypt</h3>
+<p class="meta">c. 3000 BCE</p>
+<p>Pyramids, kingship, and the long continuity of Nile civilization.</p>
+<button class="btn">View Research</button>
 </div>
-<div class="sources">
-<em>Sources: Uruk Excavation Reports, Journal of Near Eastern Studies</em>
 </div>
-</article>
-
-
-<article class="article egypt">
-<h3>Radiocarbon Corrections in Early Dynastic Egypt</h3>
-<p class="meta">c. 3100 BCE • Egypt</p>
-<p>Updated dating models subtly shift dynastic timelines and challenge long‑held assumptions.</p>
-<div class="actions">
-<button class="btn">Download PDF</button>
-<button class="btn secondary">View Sources</button>
-</div>
-<div class="comments">
-<strong>Scholarly Discussion</strong>
-<textarea rows="3" placeholder="Your interpretation or critique..."></textarea>
-</div>
-<div class="sources">
-<em>Sources: Nature, Egyptian Archaeology Review</em>
-</div>
-</article>
 </section>
-
-
-<section id="submit" class="timeline">
-<h2>Submit & Share Findings</h2>
-<p>Students, researchers, and independent scholars are encouraged to upload summaries, datasets, or papers.</p>
-<input type="file" />
-<button class="btn">Upload Finding</button>
-</section>
-</main>
 <footer>
 <p>© 2026 Chronica Antiqua</p>
-<small>Ancient history • Evidence‑based discussion • Open learning</small>
+<small>Ancient history • evidence-based • open discussion</small>
 </footer>
 </body>
 </html>
